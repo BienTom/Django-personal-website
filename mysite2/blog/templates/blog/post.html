@@ -1,0 +1,9 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% if post.image != None %}
+<img src="{{post.image.url}}" style="width:60%;margin-bottom:10px"/>
+{% endif %}
+	<h3>{{post.title}}</h3>
+	<h6>dnia {{post.date}}</h6>
+	{{post.body|safe|linebreaks}}
+{% endblock %}
